@@ -1,0 +1,10 @@
+
+1) git remote add origin https://github.com/R-Patil/SMSGroupTestApp.git
+
+2) git remote -v
+
+3) npm install -g angular-cli-ghpages 
+
+4) ng build --prod --base-href https://R-Patil.github.io/SMSGroupTestApp/
+
+5) ngh --dir dist/client  -no-silent
