@@ -9,7 +9,7 @@
 
 5) ngh --dir dist/client  -no-silent
 
-6) git push --set-upstream origin server
+6) git push --set-upstream origin server  / git commit -m "<msg>"
 
 7) git checkout server
 
@@ -18,3 +18,4 @@
 == https://github.com/R-Patil/SMSGroupTestApp/tree/server   (Server Source Code)
 
 == https://github.com/R-Patil/SMSGroupTestApp/tree/helper   (Helper files)
+
