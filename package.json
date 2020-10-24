@@ -1,0 +1,29 @@
+{
+  "name": "sg-server",
+  "version": "1.0.0",
+  "description": "SMS Group Test Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R-Patil/SMSGroupTestApp.git"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "MongoDB"
+  ],
+  "author": "Rahul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/R-Patil/SMSGroupTestApp/issues"
+  },
+  "homepage": "https://github.com/R-Patil/SMSGroupTestApp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.10"
+  }
+}
