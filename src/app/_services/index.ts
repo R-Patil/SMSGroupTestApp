@@ -1,1 +1,1 @@
-export * from './spinner.service';
+export * from './data.service';

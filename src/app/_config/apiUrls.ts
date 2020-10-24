@@ -1,1 +1,0 @@
-export var apiURL:string = 'http://localhost/TestProject/api/';

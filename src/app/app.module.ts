@@ -5,17 +5,15 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { SpinnerService } from './_services';
+import { DataService } from './_services';
 import { ErrorInterceptor } from './_helpers';
-import { SpinnerComponent } from './_spinner';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from '../app/shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SpinnerComponent,
+    AppComponent,    
     DashboardComponent
   ],
   imports: [
@@ -24,8 +22,8 @@ import { SharedModule } from '../app/shared/shared.module';
     HttpClientModule,
     SharedModule,
   ],
-  providers: [
-    SpinnerService,
+  providers: [    
+    DataService,
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
