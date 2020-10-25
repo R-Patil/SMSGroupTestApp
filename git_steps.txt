@@ -7,15 +7,26 @@
 
 4) ng build --prod --base-href https://R-Patil.github.io/SMSGroupTestApp/
 
-5) ngh --dir dist/client  -no-silent
+5) ngh --dir dist/client -no-silent
 
-6) git push --set-upstream origin server  / git commit -m "<msg>"
+6)git push --set-upstream origin server /  git commit -m "<msg>" / 
 
 7) git checkout server
+
+8) ng build --prod --base-href="/client/" 
+
+9) ng build --prod --aot= false --build-optimizer=false --base-href="/client/" 
 
 == https://github.com/R-Patil/SMSGroupTestApp/tree/client   (Client Source Code)
 
 == https://github.com/R-Patil/SMSGroupTestApp/tree/server   (Server Source Code)
 
 == https://github.com/R-Patil/SMSGroupTestApp/tree/helper   (Helper files)
+
+== https://r-patil.github.io/SMSGroupTestApp/ (Web URL)
+
+Node Installation: 
+1) npm init (To generate package.json)
+
+2) npm install express body-parser mongoose --save
 
