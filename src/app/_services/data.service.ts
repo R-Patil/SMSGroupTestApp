@@ -10,7 +10,7 @@ export class DataService {
 
    }
 
-   getData() {
-      return this.http.get(`${environment.apiBaseURL}/cities`);
+   getData(fromDate, toDate) {
+      return this.http.get(`${environment.apiBaseURL}/cities/${fromDate}/${toDate}`);
    }
 }

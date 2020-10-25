@@ -1,1 +1,36 @@
-<p>grid works!</p>
+<ngx-datatable #reportdatatable class="bootstrap" [sortType]="'multi'" [headerHeight]="50" [footerHeight]="40"
+	[rowHeight]="'auto'" [rows]="gridData" [columnMode]="'force'" [limit]="5" [loadingIndicator]="loadingIndicator">
+
+	<ngx-datatable-column name="City">
+		<ng-template ngx-datatable-cell-template let-value="value">
+			{{value}}
+		</ng-template>
+	</ngx-datatable-column>
+
+	<ngx-datatable-column name="Start_Date">
+		<ng-template ngx-datatable-cell-template let-row="row">
+			{{row.start_date | date}}
+		</ng-template>
+	</ngx-datatable-column>
+
+	<ngx-datatable-column name="End_Date">
+		<ng-template ngx-datatable-cell-template let-row="row">
+			{{row.end_date | date}}
+		</ng-template>
+	</ngx-datatable-column>
+
+	<ngx-datatable-column name="Status">
+		<ng-template ngx-datatable-cell-template let-value="value">
+			{{value}}
+		</ng-template>
+	</ngx-datatable-column>
+
+	<ngx-datatable-column name="Color">
+		<ng-template ngx-datatable-cell-template let-value="value">
+			{{value}}
+		</ng-template>
+	</ngx-datatable-column>
+
+	
+
+</ngx-datatable>

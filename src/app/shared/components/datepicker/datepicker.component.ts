@@ -12,7 +12,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export class DatepickerComponent implements ControlValueAccessor {
   @Input() name: string = '';
-  @Input() model: any;
+  model: any;
   @ViewChild('dp') dp;
   private propagateChange: any = () => { };
 

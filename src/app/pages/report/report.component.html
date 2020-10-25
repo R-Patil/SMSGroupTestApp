@@ -7,14 +7,23 @@
     <div class="row date-filters-wrapper">
       <!-- From Date -->
       <div class="form-group col-sm-6 col-lg-2">
-        <sg-datepicker name="dp1" formControlName="fromDate" [ngClass]="{ 'is-invalid': submitted && f.fromDate.errors }"></sg-datepicker>
-        <div *ngIf="submitted && f.fromDate.errors" class="invalid-feedback text-left">
-          <div *ngIf="f.fromDate.errors.required">From Date is required</div>
+        <label>From Date<span class="text-red"> * </span></label>
+        <sg-datepicker name="dp1" formControlName="fromDate"
+          [ngClass]="{ 'is-invalid': submitted && f.fromDate.errors }"></sg-datepicker>
+        <div *ngIf="submitted" class="invalid-feedback text-left">
+          <div *ngIf=" f.fromDate.errors && f.fromDate.errors.required">From Date is required</div>
         </div>
+        <div *ngIf="reportForm.hasError('unsequencial')" [ngStyle]="{'display':customValidation}"
+          class="invalid-feedback text-left">
+          <div>From Date should be less than or equal to end date</div>
+        </div>
+
       </div>
       <!-- To Date -->
       <div class="form-group col-sm-6 col-lg-2">
-        <sg-datepicker name="dp1" formControlName="toDate" [ngClass]="{ 'is-invalid': submitted && f.toDate.errors }"></sg-datepicker>
+        <label>To Date<span class="text-red"> * </span></label>
+        <sg-datepicker name="dp2" formControlName="toDate" [ngClass]="{ 'is-invalid': submitted && f.toDate.errors }">
+        </sg-datepicker>
         <div *ngIf="submitted && f.toDate.errors" class="invalid-feedback text-left">
           <div *ngIf="f.toDate.errors.required">To Date is required</div>
         </div>
@@ -23,9 +32,15 @@
       <div class="form-group col-sm-6 col-lg-2">
         <button style="margin-top: 31px;width: 70%;" class="btn btn-custom-orange" type="submit">View</button>
       </div>
-
+      <div *ngIf="error" class="setup-or-api-error pull-right">
+        <small style="color:#ff0000">Kindly setup the data properly.<br />
+        Currently, You are seeing the json data directly from the file.<br />
+        Error Message : {{error | json }}
+        </small>
+        </div>
     </div>
   </form>
 </div>
+<small style="color:#3666bf">Above date filters will work on the basis of start date.</small>
 <hr />
-<sg-grid></sg-grid>
+<sg-grid *ngIf="gridData" [gridData]="gridData"></sg-grid>
