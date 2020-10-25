@@ -11,6 +11,6 @@ export class DataService {
    }
 
    getData() {
-      return this.http.get(`${environment.apiBaseURL}`);
+      return this.http.get(`${environment.apiBaseURL}/cities`);
    }
 }

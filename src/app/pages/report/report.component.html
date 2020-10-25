@@ -1,0 +1,31 @@
+<div class="page-header-custom">
+  <h5><strong> City Data</strong></h5>
+</div>
+<hr />
+<div>
+  <form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
+    <div class="row date-filters-wrapper">
+      <!-- From Date -->
+      <div class="form-group col-sm-6 col-lg-2">
+        <sg-datepicker name="dp1" formControlName="fromDate" [ngClass]="{ 'is-invalid': submitted && f.fromDate.errors }"></sg-datepicker>
+        <div *ngIf="submitted && f.fromDate.errors" class="invalid-feedback text-left">
+          <div *ngIf="f.fromDate.errors.required">From Date is required</div>
+        </div>
+      </div>
+      <!-- To Date -->
+      <div class="form-group col-sm-6 col-lg-2">
+        <sg-datepicker name="dp1" formControlName="toDate" [ngClass]="{ 'is-invalid': submitted && f.toDate.errors }"></sg-datepicker>
+        <div *ngIf="submitted && f.toDate.errors" class="invalid-feedback text-left">
+          <div *ngIf="f.toDate.errors.required">To Date is required</div>
+        </div>
+      </div>
+      <!-- View Btn Date -->
+      <div class="form-group col-sm-6 col-lg-2">
+        <button style="margin-top: 31px;width: 70%;" class="btn btn-custom-orange" type="submit">View</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+<hr />
+<sg-grid></sg-grid>

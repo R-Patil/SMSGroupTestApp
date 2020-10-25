@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseURL: 'http://dummy.restapiexample.com/api/v1/employees'
+  apiBaseURL: 'http://localhost:3000'
 };
 
 /*

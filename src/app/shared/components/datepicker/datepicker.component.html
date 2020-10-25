@@ -1,1 +1,7 @@
-<p>datepicker works!</p>
+<div class="input-group">
+    <input class="form-control" placeholder="yyyy-mm-dd" [name]="name" [(ngModel)]="model"
+        (ngModelChange)="onModelChange()" ngbDatepicker #dp="ngbDatepicker" required>
+    <div class="input-group-addon" (click)="dp.toggle();">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+    </div>
+</div>
