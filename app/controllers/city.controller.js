@@ -27,8 +27,13 @@ exports.create = (req, res) => {
 };
 
 // Retrieve and return all cities from the database. (GET)
-exports.findAll = (req, res) => {
-    City.find()
+exports.findAll = (req, res) => {    
+    City.find({
+        start_date: {
+            $gte: (req.params.fromDate),           
+            $lt: (req.params.toDate),           
+        },
+    })
     .then(cities => {
         res.send(cities);
     }).catch(err => {
