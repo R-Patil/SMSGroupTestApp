@@ -4,8 +4,11 @@ module.exports = (app) => {
     // Create a new Note
    app.post('/cities', cities.create);
 
+   // Retrieve all cities
+   app.get('/cities/', cities.findAll);
+
     // Retrieve all cities based on start date range between from & to
-    app.get('/cities/:fromDate/:toDate', cities.findAll);
+    app.get('/cities/:fromDate/:toDate', cities.findBasedOnParam);    
 
     // Retrieve a single Note with cityId
     app.get('/cities/:cityId', cities.findOne);

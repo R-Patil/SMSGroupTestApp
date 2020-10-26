@@ -28,6 +28,18 @@ exports.create = (req, res) => {
 
 // Retrieve and return all cities from the database. (GET)
 exports.findAll = (req, res) => {    
+    City.find()
+    .then(cities => {
+        res.send(cities);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving cities."
+        });
+    });
+};
+
+// Retrieve all cities based on start date range between from & to
+exports.findBasedOnParam = (req, res) => {    
     City.find({
         start_date: {
             $gte: (req.params.fromDate),           
