@@ -54,7 +54,7 @@ export class ReportComponent implements OnInit {
     this.submitted = true;
     // stop here if form is invalid
     if (this.reportForm.invalid) {
-     // return;
+      return;
     }
     this.error = null;
     this.jsFromDate = this.datepipe.transform(this.jsFromDate, 'yyyy-MM-dd');
