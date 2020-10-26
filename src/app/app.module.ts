@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { DataService } from './_services';
+import { DataService, LoaderService } from './_services';
 import { ErrorInterceptor } from './_helpers';
 import { SharedModule } from '../app/shared/shared.module';
 import { LayoutModule } from './core/layout/layout.module';
@@ -27,6 +27,7 @@ import { LayoutModule } from './core/layout/layout.module';
   ],
   providers: [
     DataService,
+    LoaderService,
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]

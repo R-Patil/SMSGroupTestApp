@@ -7,19 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  username: any;
+
 
   constructor(private router: Router) {
 
   }
 
-  ngOnInit() {    
-    this.username = localStorage.getItem('empFName') + ' ' + localStorage.getItem('empLName');       
+  ngOnInit() {        
   }
 
-  logout() {
-    localStorage.clear();
-    this.router.navigate(['login']);
-  }
 
 }

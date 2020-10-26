@@ -23,7 +23,7 @@ export class AccordionComponent {
         title: "Client",
         description_1: "Technology : Angular",
         description_2: "CLI Version : 9.0.1",
-        description_3: "External Dependencies : bootstrap, popper, jquery, @swimlane/ngx-datatable, ngbdatepicker"
+        description_3: "External Dependencies : bootstrap, popper, jquery, primeng, ngbdatepicker"
       },
       {
         title: "Server",

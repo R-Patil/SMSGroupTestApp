@@ -11,6 +11,7 @@ export class DataService {
    }
 
    getData(fromDate, toDate) {
-      return this.http.get(`${environment.apiBaseURL}/cities/${fromDate}/${toDate}`);
+      return this.http.get(`${environment.apiBaseURL}/cities/`);
+      //return this.http.get(`${environment.apiBaseURL}/cities/${fromDate}/${toDate}`);
    }
 }

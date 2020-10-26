@@ -1,36 +1,18 @@
-<ngx-datatable #reportdatatable class="bootstrap" [sortType]="'multi'" [headerHeight]="50" [footerHeight]="40"
-	[rowHeight]="'auto'" [rows]="gridData" [columnMode]="'force'" [limit]="5" [loadingIndicator]="loadingIndicator">
+<p-table [value]="gridData" [paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10,15,20]"
+  totalRecords="1000" pageLinks="5">
+	<ng-template pTemplate="header">
+		<tr>
+			<th *ngFor="let col of columns" [pSortableColumn]="col.field">{{col.header}}
+				<p-sortIcon field="col.field"></p-sortIcon>
+			</th>
+		</tr>
+	</ng-template>
 
-	<ngx-datatable-column name="City">
-		<ng-template ngx-datatable-cell-template let-value="value">
-			{{value}}
-		</ng-template>
-	</ngx-datatable-column>
 
-	<ngx-datatable-column name="Start_Date">
-		<ng-template ngx-datatable-cell-template let-row="row">
-			{{row.start_date | date}}
-		</ng-template>
-	</ngx-datatable-column>
-
-	<ngx-datatable-column name="End_Date">
-		<ng-template ngx-datatable-cell-template let-row="row">
-			{{row.end_date | date}}
-		</ng-template>
-	</ngx-datatable-column>
-
-	<ngx-datatable-column name="Status">
-		<ng-template ngx-datatable-cell-template let-value="value">
-			{{value}}
-		</ng-template>
-	</ngx-datatable-column>
-
-	<ngx-datatable-column name="Color">
-		<ng-template ngx-datatable-cell-template let-value="value">
-			{{value}}
-		</ng-template>
-	</ngx-datatable-column>
-
-	
-
-</ngx-datatable>
+	<ng-template pTemplate="body" let-row>
+		<tr>
+			<td *ngFor="let col of columns">{{row[col.field]}}</td>
+			
+		</tr>
+	</ng-template>
+</p-table>
