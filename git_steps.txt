@@ -30,3 +30,19 @@ Node Installation:
 
 2) npm install express body-parser mongoose --save
 
+npm install -g @angular/cli --save
+
+npm install bootstrap font-awesome jquery popper.js --save
+
+npm install rxjs rxjs-compat --save
+
+npm install @ng-bootstrap/ng-bootstrap --save
+
+npm install primeng --save
+
+npm install primeicons --save
+
+npm install @angular/cdk --save
+
+npm install express body-parser  mongoose cors --save
+
